@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.waldorfprogramming.servicetools3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ServiceTools3">
+
+        <!--Log In-->
+        <activity
+            android:name=".auth.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Main Navigation List-->
+        <activity
+            android:name=".NavigationList"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <!--Customers-->
+        <activity
+            android:name=".customers.customer_list.CustomerListActivity"
+            android:parentActivityName=".NavigationList" />
+        <activity android:name=".customers.customer_list.customer_search.CustomerSearchActivity"
+            android:parentActivityName=".customers.customer_list.CustomerListActivity" />
+        <activity android:name=".customers.customer_details.CustomerDetailsActivity"
+            android:parentActivityName=".customers.customer_list.CustomerListActivity" />
+        <activity android:name=".customers.customer_details.customer_billing_details.CustomerBillingDetails"
+            android:parentActivityName=".customers.customer_details.CustomerDetailsActivity" />
+        <activity android:name=".customers.customer_create.CustomerCreate"
+            android:parentActivityName=".customers.customer_list.CustomerListActivity" />
+        <activity android:name=".customers.customer_details.CustomerEditDetails"
+            android:parentActivityName=".customers.customer_details.CustomerDetailsActivity" />
+        <activity android:name=".customers.customer_details.CustomerEditNotes"
+            android:parentActivityName=".customers.customer_details.CustomerDetailsActivity" />
+        <activity android:name=".customers.customer_details.customer_billing_details.CustomerEditBillingDetails"
+            android:parentActivityName=".customers.customer_details.customer_billing_details.CustomerBillingDetails" />
+
+        <!--Equipment-->
+        <activity android:name=".customers.equipment.equipment_list.EquipmentListActivity"
+            android:parentActivityName=".customers.customer_details.CustomerDetailsActivity" />
+        <activity android:name=".customers.equipment.equipment_details.EquipmentDetailsActivity"
+            android:parentActivityName=".customers.equipment.equipment_list.EquipmentListActivity" />
+        <activity android:name=".customers.equipment.equipment_create.EquipmentCreate"
+            android:parentActivityName=".customers.equipment.equipment_list.EquipmentListActivity" />
+        <activity android:name=".customers.equipment.equipment_details.EquipmentEditDetails"
+            android:parentActivityName=".customers.equipment.equipment_details.EquipmentDetailsActivity" />
+        <activity android:name=".customers.equipment.equipment_details.EquipmentEditNotes"
+            android:parentActivityName=".customers.equipment.equipment_details.EquipmentDetailsActivity" />
+
+        <!--Charging Tool-->
+        <activity android:name=".charging_tool.ChargingTool" />
+
+        <!--Dispatch-->
+        <activity android:name=".daily_service.daily_dispatch_list.DailyDispatchListActivity"
+            android:parentActivityName=".NavigationList" />
+        <activity android:name=".daily_service.daily_dispatch_details.DailyDispatchDetailsActivity"
+            android:parentActivityName=".daily_service.daily_dispatch_list.DailyDispatchListActivity" />
+        <activity android:name=".daily_service.daily_dispatch_details.time_keeper.TimeKeeperActivity"
+            android:parentActivityName=".daily_service.daily_dispatch_details.DailyDispatchDetailsActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".daily_service.dispatch_create.DispatchCreate"
+            android:theme="@style/AppTheme"
+            />
+
+        <!--Job History-->
+        <activity android:name=".customers.job_history.job_history_list.CustomerJobHistoryListActivity"
+            android:parentActivityName=".customers.customer_details.CustomerDetailsActivity" />
+
+        <!--Inventory-->
+        <activity android:name=".inventory.navigation_list.InventoryNavigationList"
+            android:parentActivityName=".NavigationList" />
+
+        <!--Parts-->
+        <activity android:name=".inventory.parts.part_list.PartListActivity"
+            android:parentActivityName=".inventory.navigation_list.InventoryNavigationList" />
+        <activity android:name=".inventory.parts.part_list.part_search.PartSearchActivity"
+            android:parentActivityName=".inventory.navigation_list.InventoryNavigationList" />
+    </application>
+</manifest>

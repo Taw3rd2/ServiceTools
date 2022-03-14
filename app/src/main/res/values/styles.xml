@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--login-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
+        <item name="android:windowBackground">@color/compose_background</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/dark_primary</item>
+        <item name="colorOnSurface">@color/black_text_color</item>
+        <item name="chipStyle">@style/Widget.App.Chip</item>
+    </style>
+
+    <!--Time Picker-->
+    <style name="Widget.App.Chip" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorAccent">@color/dark_primary</item>
+        <item name="colorControlActivated">@color/dark_primary</item>
+        <item name="android:textColorPrimary">@color/black_text_color</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:backgroundTint">@color/black_text_color</item>
+    </style>
+
+    <style name="Widget.App.TimePicker.Clock" parent="Widget.MaterialComponents.TimePicker.Clock">
+        <item name="clockFaceBackgroundColor">@color/compose_background</item>
+        <item name="clockHandColor">@color/dark_primary</item>
+        <item name="clockNumberTextColor">@color/black</item>
+    </style>
+
+    <!--Log In Style-->
+    <style name="cursorColor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor_style</item>
+    </style>
+
+    <style name="ThemeOverlay.FirebaseIcon" parent="AppTheme">
+        <item name="android:layout_marginTop">@dimen/icon_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/icon_bottom_margin</item>
+    </style>
+
+    <style name="ThemeOverlay.MyTextDetail" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/grey_500</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.MyTitleText" parent="AppTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+</resources>
